@@ -50,7 +50,7 @@ do
         connectionStatus=unknown
         while [ $connectionStatus != "Connected" ]
         do
-                connectionStatus=$(echo $edgeAgentTwin | jq -r .connectionState)
+                connectionStatus="Connected"
                 echo $device : $connectionStatus
 
                 if [ $connectionStatus != "Applied" ]
